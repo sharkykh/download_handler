@@ -3,7 +3,7 @@ from __future__ import print_function
 
 """ Simple post-download processor for torrents """
 __author__ = 'sharkykh'
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 
 # Recommended:
 #   After configuring as needed, run the file with the `pyw` extension in order to avoid opening a console window.
@@ -33,6 +33,7 @@ urllib3.disable_warnings(InsecureRequestWarning)
 
 SUPPORTED_LIBRARY_MANAGERS = {
     'm': 'Medusa',  # Set LIBRARY_MANAGER_TYPE to 'm' if you use Medusa
+    'sc': 'SickChill'  # Set LIBRARY_MANAGER_TYPE to 'sc' if you use SickChill
     'sr': 'SickRage'  # Set LIBRARY_MANAGER_TYPE to 'sr' if you use SickRage
 }
 
@@ -77,7 +78,7 @@ class TvLibraryManagerApi(object):
         self.url = '{0}/api/{1}/'.format(LIBRARY_MANAGER_URL, LIBRARY_MANAGER_API_KEY)
         
         process_methods = ['copy', 'move', 'hardlink', 'symlink']
-        if LIBRARY_MANAGER_TYPE == 'sr':
+        if LIBRARY_MANAGER_TYPE in ('sc', 'sr'):
             process_methods.append('symlink_reversed')
 
         self.supported_commands = {
