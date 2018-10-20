@@ -7,14 +7,14 @@ Send a post-process request to Medusa / SickChill / SickRage directly from your 
 2. [`requests`](https://pypi.org/project/requests/) Python package
 
 ## Installation
-Clone this repository in a convenient location using git:
+Clone this repository to a convenient location using `git`:
 ```shell
 git clone https://github.com/sharkykh/download_handler.git
 ```
-### OR
+#### OR
 Download and extract the [zip file](https://github.com/sharkykh/download_handler/archive/master.zip)/[tar.gz file](https://github.com/sharkykh/download_handler/archive/master.tar.gz) to a convenient location.
 
-### Instructions
+## Instructions
 **First:** Update [the configuration values in the script](https://github.com/sharkykh/download_handler/blob/master/download_handler.py#L40-L72).  
 **Then:** In your download client, find the "Run external program" setting and set the file path with the currect arguments.  
 
@@ -28,7 +28,7 @@ Download and extract the [zip file](https://github.com/sharkykh/download_handler
 "C:\Python27\python.exe" "C:\path\to\download_handler.pyw" "%R" --label "%L"
 ```
 
-### Usage
+## Usage
 ```shell
 $ download_handler.py -h
 usage: download_handler.py [-h] --label LABEL path
