@@ -2,6 +2,10 @@
 
 Send a post-process request to Medusa / SickRage directly from your download client.
 
+## Requirements
+1. Python (tested with version `2.7`, should work with newer versions as well)
+2. [`requests`](https://pypi.org/project/requests/) Python package
+
 ## Installation
 Clone this repository in a convenient location using git:
 ```shell
