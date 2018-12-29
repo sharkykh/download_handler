@@ -141,7 +141,7 @@ def main():
     parser.add_argument('--label', help='torrent label', required=True)
     args = parser.parse_args()
 
-    console = sys.stdin.isatty()
+    console = sys.stdin and sys.stdin.isatty()
     if console:
         print('Path:\t' + args.path)
         print('Label:\t' + args.label)
