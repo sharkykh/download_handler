@@ -3,7 +3,7 @@
 Send a post-process request to Medusa / SickChill / SickRage directly from your download client.
 
 ## Requirements
-1. Python (tested with version `2.7`, should work with newer versions as well)
+1. Python (tested with versions `2.7` and `3.7`, should work with `3.4`, `3.5`, `3.6`, `3.8`, etc.)
 2. [`requests`](https://pypi.org/project/requests/) Python package
 
 ## Installation
