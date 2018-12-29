@@ -30,6 +30,11 @@ from urllib3.exceptions import InsecureRequestWarning
 
 urllib3.disable_warnings(InsecureRequestWarning)
 
+if sys.version_info[0] == 3:
+    string_types = str,
+else:
+    string_types = basestring,
+
 
 SUPPORTED_LIBRARY_MANAGERS = {
     'm': 'Medusa',  # Set LIBRARY_MANAGER_TYPE to 'm' if you use Medusa
@@ -106,7 +111,7 @@ class TvLibraryManagerApi(object):
 
         for key, value in opts.items():
             key = key.lower()
-            value = value.lower() if isinstance(value, basestring) else value
+            value = value.lower() if isinstance(value, string_types) else value
 
             if key not in self.supported_commands[cmd]:
                 print('unsupported option: "{k}" for cmd: "{c}"'.format(k=key, c=cmd))
