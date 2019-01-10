@@ -15,7 +15,7 @@ git clone https://github.com/sharkykh/download_handler.git
 Download and extract the [zip file](https://github.com/sharkykh/download_handler/archive/master.zip)/[tar.gz file](https://github.com/sharkykh/download_handler/archive/master.tar.gz) to a convenient location.
 
 ## Instructions
-**First:** Update [the configuration values in the script](https://github.com/sharkykh/download_handler/blob/master/download_handler.py#L40-L72).  
+**First:** Update [the configuration values in the script](https://github.com/sharkykh/download_handler/blob/master/download_handler.py#L45-L77).  
 **Then:** In your download client, find the "Run external program" setting and set the file path with the currect arguments.  
 
 #### uTorrent:
